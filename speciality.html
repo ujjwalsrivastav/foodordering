@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food website | Speciality</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"><i class="fas fa-utensils"></i>food</a>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+
+        <nav class="navbar">
+            <a href="./index1.html">home</a>
+            <a href="./speciality.html">speciality</a>
+            <a href="./popular.html">popular</a>
+            <!-- <a href="#gallery">gallery</a>
+            <a href="#review">review</a> -->
+            <a href="./order.html">order</a>
+        </nav>
+    </header>
+
+    <section class="speciality" id="speciality">
+
+        <h1 class="heading"> our <span>speciality</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img class="image" src="./image/s-img-1.jpg" alt="">
+                <div class="content">
+                    <img src="./image/s-img-1.jpg" alt="">
+                    <h3>tasty burger</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa
+                        tenetur voluptates aperiam tempore libero labore aut.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="./image/s-img-2.jpg" alt="">
+                <div class="content">
+                    <img src="./image/s-img-2.jpg" alt="">
+                    <h3>tasty pizza</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa
+                        tenetur voluptates aperiam tempore libero labore aut.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="./image/s-img-3.jpg" alt="">
+                <div class="content">
+                    <img src="./image/s-img-3.jpg" alt="">
+                    <h3>cold ice-cream</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa
+                        tenetur voluptates aperiam tempore libero labore aut.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="images/s-img-4.jpg" alt="">
+                <div class="content">
+                    <img src="./image/s-img-4.jpg" alt="">
+                    <h3>cold drinks</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa
+                        tenetur voluptates aperiam tempore libero labore aut.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="./image/s-img-5.jpg" alt="">
+                <div class="content">
+                    <img src="./image/s-img-5.jpg" alt="">
+                    <h3>tasty sweets</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa
+                        tenetur voluptates aperiam tempore libero labore aut.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="./image/s-img-6.jpg" alt="">
+                <div class="content">
+                    <img src="./image/s-img-6.jpg" alt="">
+                    <h3>healty breakfast</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa
+                        tenetur voluptates aperiam tempore libero labore aut.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+        let menu = document.querySelector('#menu-bar');
+        let navbar = document.querySelector('.navbar');
+
+        menu.onclick = () => {
+
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+
+        }
+
+        window.onscroll = () => {
+
+            menu.classList.remove('fa-times');
+            navbar.classList.remove('active');
+
+            if (window.scrollY > 60) {
+                document.querySelector('#scroll-top').classList.add('active');
+            } else {
+                document.querySelector('#scroll-top').classList.remove('active');
+            }
+
+        }
+
+        function loader() {
+            document.querySelector('.loader-container').classList.add('fade-out');
+        }
+
+        function fadeOut() {
+            setInterval(loader, 3000);
+        }
+
+        window.onload = fadeOut();
+    </script>
+</body>
+
+</html>

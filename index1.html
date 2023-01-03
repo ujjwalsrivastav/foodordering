@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food website</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"><i class="fas fa-utensils"></i>food</a>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+
+        <nav class="navbar">
+            <a href="./index1.html">home</a>
+            <a href="./speciality.html">speciality</a>
+            <a href="./popular.html">popular</a>
+            <!-- <a href="#gallery">gallery</a>
+            <a href="#review">review</a> -->
+            <a href="./order.html">order</a>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="content">
+            <h3>food made with love</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas accusamus tempore temporibus rem amet
+                laudantium animi optio voluptatum. Natus obcaecati unde porro nostrum ipsam itaque impedit incidunt rem
+                quisquam eos!</p>
+            <a href="#" class="btn">order now</a>
+        </div>
+        <div class="image">
+            <img src="./image/home-img.png" alt="">
+        </div>
+    </section>
+
+    <script>
+
+        let menu = document.querySelector('#menu-bar');
+        let navbar = document.querySelector('.navbar');
+
+        menu.onclick = () => {
+
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+
+        }
+
+        window.onscroll = () => {
+
+            menu.classList.remove('fa-times');
+            navbar.classList.remove('active');
+
+            if (window.scrollY > 60) {
+                document.querySelector('#scroll-top').classList.add('active');
+            } else {
+                document.querySelector('#scroll-top').classList.remove('active');
+            }
+
+        }
+
+        function loader() {
+            document.querySelector('.loader-container').classList.add('fade-out');
+        }
+
+        function fadeOut() {
+            setInterval(loader, 3000);
+        }
+
+        window.onload = fadeOut();
+    </script>
+</body>
+
+</html>
